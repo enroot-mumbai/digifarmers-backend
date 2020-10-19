@@ -8,5 +8,71 @@ servers:
     description: Login API
 paths: {}
 components:
-  schemas: {}
+  schemas:
+    User:
+      title: User
+      type: object
+      description: ''
+      properties:
+        id:
+          type: string
+        aadharCard:
+          type: string
+        password:
+          type: string
+        phoneNumber:
+          type: string
+        state:
+          type: string
+        alternatePerson:
+          type:
+            - string
+            - object
+          properties:
+            name:
+              type: string
+            relation:
+              type: string
+            phoneNumber:
+              type: string
+            whatsappNumber:
+              type: string
+            referralCode:
+              type: string
+        basicDetails:
+          type:
+            - string
+            - object
+          properties:
+            firstName:
+              type: string
+            lastName:
+              type: string
+            middleName:
+              type: string
+            district:
+              type: string
+            taluka:
+              type: string
+            village:
+              type: string
+            gender:
+              type: string
+            caste:
+              type: string
+            profilePicture:
+              type: string
+        userDocuments:
+          type:
+            - string
+            - object
+          properties:
+            aadharCard:
+              type: string
+            panCard:
+              type: string
+            landDocument:
+              type: string
+            soilReport:
+              type: string
   securitySchemes: {}
