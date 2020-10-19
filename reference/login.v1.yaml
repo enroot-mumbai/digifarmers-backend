@@ -1,0 +1,12 @@
+openapi: 3.0.0
+info:
+  title: login
+  version: '1.0'
+  description: Endpoint to Login user
+servers:
+  - url: /login
+    description: Login API
+paths: {}
+components:
+  schemas: {}
+  securitySchemes: {}
