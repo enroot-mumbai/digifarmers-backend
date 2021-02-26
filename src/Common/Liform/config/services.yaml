@@ -1,0 +1,29 @@
+services:
+
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  app.liform.form_data.extension:
+    class: App\Common\Liform\Extension\FormExtension
+    tags:
+      - { name: liform.extension }
+
+  app.liform.file_type.transformer:
+    class: App\Common\Liform\Transformer\FileTransformer
+    parent: Limenius\Liform\Transformer\AbstractTransformer
+    public: false
+    autoconfigure: false
+    autowire: false
+    tags:
+      - { name: liform.transformer, form_type: file, widget: file_widget }
+
+  app.liform.hidden_type.transformer:
+    class: App\Common\Liform\Transformer\HiddenTransformer
+    parent: Limenius\Liform\Transformer\AbstractTransformer
+    public: false
+    autoconfigure: false
+    autowire: false
+    tags:
+      - { name: liform.transformer, form_type: hidden, widget: hidden }
